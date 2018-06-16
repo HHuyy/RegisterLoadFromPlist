@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA1CC98E20D3A03B00B63035 /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CC98D20D3A03B00B63035 /* District.swift */; };
 		AA1CC99020D3A1F000B63035 /* ShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CC98F20D3A1F000B63035 /* ShowTableViewController.swift */; };
+		AA1CC99220D3B6C000B63035 /* PlistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CC99120D3B6C000B63035 /* PlistService.swift */; };
 		AA7A322420D36848003C645D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A322320D36848003C645D /* City.swift */; };
 		AA7A322620D3688F003C645D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A322520D3688F003C645D /* DataService.swift */; };
 		AAC5B31E20D2546B0092D3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC5B31D20D2546B0092D3F8 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		AA1CC98D20D3A03B00B63035 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
 		AA1CC98F20D3A1F000B63035 /* ShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewController.swift; sourceTree = "<group>"; };
+		AA1CC99120D3B6C000B63035 /* PlistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistService.swift; sourceTree = "<group>"; };
 		AA7A322320D36848003C645D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		AA7A322520D3688F003C645D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AAC5B31A20D2546B0092D3F8 /* RegisterLoadFromPlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterLoadFromPlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,7 @@
 				AA7A322320D36848003C645D /* City.swift */,
 				AA1CC98D20D3A03B00B63035 /* District.swift */,
 				AA7A322520D3688F003C645D /* DataService.swift */,
+				AA1CC99120D3B6C000B63035 /* PlistService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				AA1CC98E20D3A03B00B63035 /* District.swift in Sources */,
 				AAC5B33420D259570092D3F8 /* TableViewController.swift in Sources */,
 				AAC5B31E20D2546B0092D3F8 /* AppDelegate.swift in Sources */,
+				AA1CC99220D3B6C000B63035 /* PlistService.swift in Sources */,
 				AA7A322620D3688F003C645D /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

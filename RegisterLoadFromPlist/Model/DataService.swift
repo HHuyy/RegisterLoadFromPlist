@@ -26,50 +26,36 @@ class DataService {
     }
     func getDataCities() {
         _cities = []
-        guard let filePath = Bundle.main.path(forResource: "Cities", ofType: "plist") else { return  }
-        guard let data = FileManager.default.contents(atPath: filePath) else { return }
-        do {
-            guard let results = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil) as? DICT else { return  }
-            if let dataCities = results["Cities"] as? [DICT] {
-                for cityObject in dataCities {
-                    if let city = City(dictionary: cityObject) {
-                        _cities?.append(city)
-                    }
-                }
+        guard let dictionary = PlistService().getDataFromPlist(plist: "Cities.plist") else { return  }
+        guard let cityDictionary = dictionary["Cities"] as? [DICT] else { return  }
+        for dataCity in cityDictionary {
+            if let city = City(dictionary: dataCity) {
+                _cities?.append(city)
             }
-        } catch {
-            print("PropertyListSerialization Error")
         }
     }
     
-    private var _Districts: [District]?
-    var Districts: [District] {
+    private var _districts: [District]?
+    var districts: [District] {
         get {
-            if _Districts == nil {
+            if _districts == nil {
                 getDataDistricts()
             }
-            return _Districts ?? []
+            return _districts ?? []
         }
         set {
-            _Districts = newValue
+            _districts = newValue
         }
     }
     
     func getDataDistricts() {
-        _Districts = []
-        guard let filePath = Bundle.main.path(forResource: "Districts", ofType: "plist") else { return }
-        guard let data = FileManager.default.contents(atPath: filePath) else { return }
-        do {
-            guard let results = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil) as? DICT else { return }
-            if let dataDistricts = results["Districts"] as? [DICT] {
-                for DistrictObject in dataDistricts {
-                    if let District = District(dictionary: DistrictObject) {
-                        _Districts?.append(District)
-                    }
-                }
+        _districts = []
+        guard let dictionary = PlistService().getDataFromPlist(plist: "Districts.plist") else { return  }
+        guard let districtDictionary = dictionary["Districts"] as? [DICT] else { return  }
+        for districtObject in districtDictionary {
+            if let district = District(dictionary: districtObject) {
+                _districts?.append(district)
             }
-        } catch {
-            print("PropertyListSerialization Error")
         }
     }
 }
