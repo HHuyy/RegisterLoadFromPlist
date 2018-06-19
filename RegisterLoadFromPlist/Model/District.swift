@@ -9,18 +9,18 @@
 import Foundation
 
 class District {
-    var CityCode: Int
-    var DistrictCode: Int
-    var Name: String
+    var cityCode: Int
+    var districtCode: Int
+    var name: String
     
     init?(dictionary: DICT) {
-        guard let CityCode = dictionary["CityCode"] as? Int else { return nil }
-        guard let DistrictCode = dictionary["DistrictCode"] as? Int else { return nil }
-        guard let Name = dictionary["Name"] as? String else { return nil }
+        guard let cityCode = dictionary["CityCode"] as? Int else { return nil }
+        guard let districtCode = dictionary["DistrictCode"] as? Int else { return nil }
+        guard let name = dictionary["Name"] as? String else { return nil }
         
-        self.CityCode = CityCode
-        self.DistrictCode = DistrictCode
-        self.Name = Name
+        self.cityCode = cityCode
+        self.districtCode = districtCode
+        self.name = name
     }
     
 }

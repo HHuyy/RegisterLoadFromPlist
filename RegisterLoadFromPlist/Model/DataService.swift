@@ -9,6 +9,7 @@
 import Foundation
 
 typealias DICT = Dictionary<AnyHashable, Any>
+
 class DataService {
     
     static let shared: DataService = DataService()
@@ -57,5 +58,18 @@ class DataService {
                 _districts?.append(district)
             }
         }
+    }
+    
+    func fillterDistrict(with cityCode: Int) -> [District] {
+        
+//        var fillterDistrict: [District] = []
+//        
+//        for district in _districts ?? [] {
+//            if district.cityCode == cityCode {
+//                fillterDistrict.append(district)
+//            }
+//        }
+        
+        return _districts?.filter { $0.cityCode == cityCode } ?? []
     }
 }

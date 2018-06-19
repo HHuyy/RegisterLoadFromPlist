@@ -10,23 +10,28 @@ import UIKit
 
 class ShowTableViewController: UITableViewController {
 
+    var cityCode: Int!
+    
+    var districts: [District] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if cityCode != nil {
+            districts = DataService.shared.fillterDistrict(with: cityCode)
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataService.shared.districts.count
+        return districts.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
-        cell.textLabel?.text = DataService.shared.districts[indexPath.row].Name
+        cell.textLabel?.text = districts[indexPath.row].name
         return cell
     }
-
 }
