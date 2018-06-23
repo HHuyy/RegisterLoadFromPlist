@@ -19,6 +19,8 @@
 		AAC5B33020D2548A0092D3F8 /* Cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC5B32F20D2548A0092D3F8 /* Cities.plist */; };
 		AAC5B33220D254910092D3F8 /* Districts.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC5B33120D254910092D3F8 /* Districts.plist */; };
 		AAC5B33420D259570092D3F8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC5B33320D259570092D3F8 /* TableViewController.swift */; };
+		DBB3404A20DE3F27006D8BF1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3404920DE3F27006D8BF1 /* RegisterViewController.swift */; };
+		DBB3404C20DE3F38006D8BF1 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3404B20DE3F38006D8BF1 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		AAC5B32F20D2548A0092D3F8 /* Cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cities.plist; sourceTree = "<group>"; };
 		AAC5B33120D254910092D3F8 /* Districts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Districts.plist; sourceTree = "<group>"; };
 		AAC5B33320D259570092D3F8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		DBB3404920DE3F27006D8BF1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DBB3404B20DE3F38006D8BF1 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 			children = (
 				AAC5B33320D259570092D3F8 /* TableViewController.swift */,
 				AA1CC98F20D3A1F000B63035 /* ShowTableViewController.swift */,
+				DBB3404920DE3F27006D8BF1 /* RegisterViewController.swift */,
+				DBB3404B20DE3F38006D8BF1 /* UserInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 				AA1CC99020D3A1F000B63035 /* ShowTableViewController.swift in Sources */,
 				AA7A322420D36848003C645D /* City.swift in Sources */,
 				AA1CC98E20D3A03B00B63035 /* District.swift in Sources */,
+				DBB3404A20DE3F27006D8BF1 /* RegisterViewController.swift in Sources */,
+				DBB3404C20DE3F38006D8BF1 /* UserInfoViewController.swift in Sources */,
 				AAC5B33420D259570092D3F8 /* TableViewController.swift in Sources */,
 				AAC5B31E20D2546B0092D3F8 /* AppDelegate.swift in Sources */,
 				AA1CC99220D3B6C000B63035 /* PlistService.swift in Sources */,

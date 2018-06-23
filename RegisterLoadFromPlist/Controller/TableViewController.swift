@@ -35,6 +35,8 @@ class TableViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             let showTableViewController = segue.destination as? ShowTableViewController
             showTableViewController?.cityCode = DataService.shared.cities[indexPath.row].cityCode
+            UserDefaults.standard.set(DataService.shared.cities[indexPath.row].name, forKey: "city")
+            print(DataService.shared.cities[indexPath.row].name)
         }
     }
     

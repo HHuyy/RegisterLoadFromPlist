@@ -34,4 +34,9 @@ class ShowTableViewController: UITableViewController {
         cell.textLabel?.text = districts[indexPath.row].name
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            UserDefaults.standard.set(DataService.shared.districts[indexPath.row].name, forKey: "district")
+            print(DataService.shared.districts[indexPath.row].name)
+    }
 }
