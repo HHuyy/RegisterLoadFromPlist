@@ -15,6 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let navigationController = application.windows[0].rootViewController as? UINavigationController
+        
+        let mainStorybroad: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if UserDefaults.standard.object(forKey: "name") != nil || UserDefaults.standard.object(forKey: "gender") != nil || UserDefaults.standard.object(forKey: "age") != nil || UserDefaults.standard.object(forKey: "district") != nil || UserDefaults.standard.object(forKey: "city") != nil {
+            let UserInfoViewController: UserInfoViewController = mainStorybroad.instantiateViewController(withIdentifier: "UserInfo") as! UserInfoViewController
+            navigationController?.pushViewController(UserInfoViewController, animated: true)
+        } else {
+            let startedViewController : TableViewController = mainStorybroad.instantiateViewController(withIdentifier: "Started") as! TableViewController
+            navigationController?.pushViewController(startedViewController, animated: true)
+        }
+        
         // Override point for customization after application launch.
         return true
     }

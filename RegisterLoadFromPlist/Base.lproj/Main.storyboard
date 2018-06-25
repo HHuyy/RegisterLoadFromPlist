@@ -13,7 +13,7 @@
         <!--Table View Controller-->
         <scene sceneID="idw-sm-8yL">
             <objects>
-                <tableViewController id="UlA-bz-iUE" customClass="TableViewController" customModule="RegisterLoadFromPlist" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Started" id="UlA-bz-iUE" customClass="TableViewController" customModule="RegisterLoadFromPlist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OlT-ak-fXb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +207,7 @@
         <!--User Info-->
         <scene sceneID="ult-UX-2BD">
             <objects>
-                <viewController id="KLX-eV-wP5" customClass="UserInfoViewController" customModule="RegisterLoadFromPlist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserInfo" id="KLX-eV-wP5" customClass="UserInfoViewController" customModule="RegisterLoadFromPlist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ow-JA-Q0R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
