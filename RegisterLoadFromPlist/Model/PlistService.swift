@@ -19,7 +19,7 @@ class PlistService {
         do {
             guard let root = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil) as? DICT else { return nil }
             results = root
-        } catch  {
+        } catch {
             print("PropertyListSerialization Error")
         }
         return results
