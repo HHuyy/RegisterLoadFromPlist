@@ -27,8 +27,22 @@ class DataService {
     }
     func getDataCities() {
         _cities = []
-        guard let dictionary = PlistService().getDataFromPlist(plist: "Cities.plist") else { return  }
-        guard let cityDictionary = dictionary["Cities"] as? [DICT] else { return  }
+//        guard let dictionary = PlistService().getDataFromPlist(plist: "Cities.plist") else { return }
+//        guard let cityDictionary = dictionary["Cities"] as? [DICT] else { return  }
+        
+        var results: DICT?
+        
+        let url = Bundle.main.url(forResource: "Cities", withExtension: "plist")!
+        do {
+            let data = try Data(contentsOf: url)
+            let resultS = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil)
+            results = resultS as? DICT
+        } catch {
+            print(error.localizedDescription)
+        }
+
+        guard let dictionary = results else { return }
+        guard let cityDictionary = dictionary["Cities"] as? [DICT] else { return }
         for dataCity in cityDictionary {
             if let city = City(dictionary: dataCity) {
                 _cities?.append(city)
@@ -51,8 +65,23 @@ class DataService {
     
     func getDataDistricts() {
         _districts = []
-        guard let dictionary = PlistService().getDataFromPlist(plist: "Districts.plist") else { return  }
-        guard let districtDictionary = dictionary["Districts"] as? [DICT] else { return  }
+//        guard let dictionary = PlistService().getDataFromPlist(plist: "Districts.plist") else { return  }
+//        guard let districtDictionary = dictionary["Districts"] as? [DICT] else { return  }
+        
+        var results: DICT?
+        
+        let url = Bundle.main.url(forResource: "Districts", withExtension: "plist")!
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let resultS = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil)
+            results = resultS as? DICT
+        } catch  {
+            print(error.localizedDescription)
+        }
+        
+        guard let dictionary = results else { return }
+        guard let districtDictionary = dictionary["Districts"] as? [DICT] else { return }
         for districtObject in districtDictionary {
             if let district = District(dictionary: districtObject) {
                 _districts?.append(district)
